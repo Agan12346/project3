@@ -149,3 +149,41 @@ body,
     margin: 10px 0;
     float: right; 
 }
+
+@media (min-width: 600px) {
+    #mobile-page {
+      font-size: 18px;
+      background-color: rgb(166, 206, 225);
+      padding: 10px;
+      color:rgb(16, 20, 31)
+    }
+
+    #page-home h1 {
+        font-size: 2.5em;
+      }
+
+      #page-home nav#horz1 ul li {
+        display: inline-block;
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    #page-home nav#horz1 ul li a {
+        font-size: 1.2rem;
+        padding: 1rem 3rem;
+    }
+
+  }
+  
+  @media (min-width: 1000px) {
+    #mobile-page {
+      font-size: 18px;
+      background-color: rgb(121, 166, 194);
+      padding: 15px;
+      color:rgb(53, 64, 94)
+    }
+
+    #page-home h1 {
+        font-size: 2.5em;
+      }
+  }
