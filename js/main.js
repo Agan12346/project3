@@ -7,7 +7,13 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Biggest Wonder!'
+    title: 'Biggest Wonder!',
+    icon: {
+        url: '../media/image/icon.png',
+        size: new google.maps.Size(32, 32),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(16, 32)
+    }
   });
 
   var infoWindow = new google.maps.InfoWindow({
@@ -33,9 +39,9 @@ function initMap() {
   });
 
   var locations = [
-    { lat: -39.409, lng: 152.477, title: 'Another pretty location 1' },
-    { lat: -35.2987, lng: 159.134, title: 'Another pretty location 2' },
-    { lat: -20.234, lng: 157.3984, title: 'Another pretty location 3' }
+    { lat: -34.562, lng: 150.762, title: 'Random Location 1' },
+    { lat: -34.247, lng: 150.539, title: 'Random Location 2' },
+    { lat: -34.119, lng: 150.814, title: 'Random Location 3' }
   ];
 
   locations.forEach(function(location) {
