@@ -7,12 +7,11 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        title: 'Hello World!'
+        title: 'Biggest Wonder!'
     });
 
-
     var infoWindow = new google.maps.InfoWindow({
-        content: '<h3>My Marker</h3><p>Here is some information about this location.</p>',
+        content: '<h3>Wonder 1</h3><p>Some pretty location 1.</p>',
     });
 
     marker.addListener('click', function() {
@@ -20,13 +19,13 @@ function initMap() {
     });
 
     var infoWindow = new google.maps.InfoWindow({
-        content: '<h3>My Custom Location</h3><p>Details about this location.</p>'
+        content: '<h3>Wonder 2</h3><p>Some pretty location 2.</p>'
     });
     
     var marker = new google.maps.Marker({
         position: { lat: -34.397, lng: 150.644 },
         map: map,
-        title: 'Click to see details'
+        title: 'More details'
     });
     
     marker.addListener('click', function() {
@@ -34,9 +33,9 @@ function initMap() {
     });
 
     var locations = [
-        { lat: -34.397, lng: 150.644, title: 'Location 1' },
-        { lat: -33.8688, lng: 151.2093, title: 'Location 2' },
-        { lat: -35.2809, lng: 149.1300, title: 'Location 3' }
+        { lat: -39.409, lng: 152.477, title: 'Another pretty location 1' },
+        { lat: -35.2987, lng: 159.134, title: 'Another pretty location 2' },
+        { lat: -20.234, lng: 157.3984, title: 'Another pretty location 3' }
     ];
 
     locations.forEach(function(location) {
@@ -46,10 +45,9 @@ function initMap() {
             title: location.title
         });
 
-        // Optional: Add a click event to zoom to the marker location
         marker.addListener('click', function() {
             map.setCenter(marker.getPosition());
-            map.setZoom(12);
+            map.setZoom(8);
         })
     })
 }
