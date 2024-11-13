@@ -1,35 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Project 3</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-  </head>
-
-  <body id="mobile-page">
-    <header>
-      <nav id="horz1">
-        <ul>
-          <li><a href="index.html">Homepage</a></li>
-          <li><a href="page2.html">Resume</a></li>
-          <li><a href="page3.html">How to make tea</a></li>
-          <li><a href="page4.html">Maps</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="map"></div>
-    <script>
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWKD_wi__BxiR8YbroVmt45cVlhczetqc&callback=initMap" async defer></script>
+    <script src="js/main.js" defer></script>
     <style>
         #map {
             height: 500px;
@@ -37,32 +14,22 @@
         }
     </style>
 </head>
-<body>
+
+<body id="mobile-page">
+    <header>
+        <nav id="horz1">
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="page2.html">Resume</a></li>
+                <li><a href="page3.html">How to make tea</a></li>
+                <li><a href="page4.html">Maps</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <h1>My Map</h1>
     <div id="map"></div>
-
-    <script>
-        function initMap() {
-            var myLatLng = { lat: -34.397, lng: 150.644 };  
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 8,
-                center: myLatLng
-            });
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Hello World!'
-            });
-
-    
-            var infoWindow = new google.maps.InfoWindow({
-                content: '<h3>My Marker</h3><p>Here is some information about this location.</p>',
-            });
-
-            marker.addListener('click', function() {
-                infoWindow.open(map, marker);
-            });
-        }
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWKD_wi__BxiR8YbroVmt45cVlhczetqc&callback=initMap" async defer></script>
 </body>
+
 </html>
